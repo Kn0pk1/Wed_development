@@ -26,7 +26,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    /*ackground: linear-gradient(to right, rgba(0, 51, 102, 0.8) 40%,transparent 40%);*/
+   /*background: linear-gradient(to right, rgba(0, 51, 102, 0.8) 40%,transparent 40%);*/
 }
 
 /* Стили для логотипа */
@@ -81,7 +81,8 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    height: 100vh;
+    height: auto; /* Автоматическая высота на маленьких экранах */
+    min-height: 100vh; /* Минимальная высота равна высоте экрана */
 }
 
 .search-form {
@@ -276,6 +277,8 @@ nav ul li a:hover {
     .search-form {
         width: 60%;
         padding: 30px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
     }
 
     .travel-tips {
@@ -322,6 +325,8 @@ nav ul li a:hover {
     .search-form {
         width: 100%;
         padding: 20px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
     }
 
     .button-group {
@@ -357,6 +362,8 @@ nav ul li a:hover {
 
     .search-form {
         padding: 15px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
     }
 
     .search-form label {
