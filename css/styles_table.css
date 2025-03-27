@@ -18,7 +18,7 @@
 /* Стили для body */
 body {
     font-family: var(--font-family);
-    background-image: url('C:/Users/Ярослав/OneDrive/Рабочий стол/site/img/background.jpg');
+    background-image: url('img/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
