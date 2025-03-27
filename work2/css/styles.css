@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; /* Убираем отступы по умолчанию */
     padding: 0; /* Убираем внутренние отступы */
-    background-image: url('img/background.jpg'); /* Путь к фоновому изображению */
+    background-image: url('https://kn0pk1.github.io/Wed_development/img/background.jpg'); /* Путь к фоновому изображению */
     background-size: cover; /* Изображение заполняет всю область */
     background-position: center; /* Центрирование изображения */
     background-repeat: no-repeat; /* Изображение не повторяется */
