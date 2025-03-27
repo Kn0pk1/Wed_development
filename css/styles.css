@@ -1,0 +1,383 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы */
+    background-image: url('img/background.jpg'); /* Путь к фоновому изображению */
+    background-size: cover; /* Изображение заполняет всю область */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-attachment: fixed; /* Фиксированный фон (не скроллится) */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+   /*background: linear-gradient(to right, rgba(0, 51, 102, 0.8) 40%,transparent 40%);*/
+}
+
+/* Стили для логотипа */
+.logo {
+    display: flex; /* Размещаем части логотипа рядом */
+    align-items: center; /* Выравнивание по центру */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .travel {
+    color: #4ad5d5; /* Цвет для "TRAVEL" */
+}
+
+.logo .logo-text {
+    color: #fff; /* Цвет для "LOGO" */
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+}
+
+nav ul li {
+    margin-left: 90px; /* Увеличенное расстояние между кнопками */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Убираем отступ для первой кнопки */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Белый цвет текста */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Подчеркивание для активной ссылки HOME */
+nav ul li a.active {
+    color: #4ad5d5; /* Цвет при активации */
+    text-decoration: underline; /* Подчеркивание */
+}
+
+nav ul li a:hover {
+    color: #4ad5d5; /* Цвет при наведении */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    height: auto; /* Автоматическая высота на маленьких экранах */
+    min-height: 100vh; /* Минимальная высота равна высоте экрана */
+}
+
+.search-form {
+    background-color: rgba(0, 51, 102, 0.8); /* Полупрозрачный фон */
+    color: #fff;
+    width: 40%;
+    padding: 50px; /* Возвращаем исходные отступы */
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: transparent; /* Прозрачный фон */
+    color: #4ad5d5; /* Цвет текста */
+    border: 2px solid #4ad5d5; /* Контур кнопки */
+    padding: 10px 20px;
+    border-radius: 50px; /* Овальная форма */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Плавный переход при наведении */
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: #4ad5d5; /* Фон при активации или наведении */
+    color: #fff; /* Цвет текста при активации или наведении */
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для меток */
+.search-form label {
+    margin-bottom: 5px;
+    color: #4ad5d5; /* Цвет текста меток */
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px; /* Отступ слева */
+}
+
+/* Стили для всех полей ввода */
+.search-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #fff; /* Белый контур */
+    border-radius: 50px; /* Овальная форма */
+    background-color: transparent; /* Прозрачный фон */
+    color: #fff; /* Цвет текста при вводе */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: #4ad5d5; /* Подсветка при фокусе */
+    background-color: transparent; /* Фон остается прозрачным */
+}
+
+/* Стили для параллельных полей Departure и Arrival */
+.search-form .date-fields {
+    display: flex;
+    gap: 10px; /* Расстояние между полями */
+    margin-bottom: 15px;
+}
+
+.search-form .date-fields div {
+    flex: 1; /* Равномерное распределение ширины */
+}
+
+.search-form .date-fields input {
+    width: 100%; /* Занимают всю ширину родителя */
+    padding: 10px;
+    border: 2px solid #fff; /* Белый контур */
+    border-radius: 50px; /* Овальная форма */
+    background-color: transparent; /* Прозрачный фон */
+    color: #fff; /* Цвет текста при вводе */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.search-form .date-fields input:focus {
+    outline: none;
+    border-color: #4ad5d5; /* Подсветка при фокусе */
+    background-color: transparent; /* Фон остается прозрачным */
+}
+
+/* Стили для кнопки SEARCH */
+.search-btn {
+    background-color: #4ad5d5; /* Цвет фона кнопки */
+    color: black; /* Прозрачный текст */
+    border: none;
+    padding: 10px 20px; /* Уменьшаем размер кнопки */
+    border-radius: 50px; /* Овальная форма */
+    cursor: pointer;
+    font-size: 12px; /* Уменьшаем размер шрифта */
+    font-weight: bold;
+    width: 25%; /* Кнопка занимает 25% ширины родителя */
+    margin: 0 auto; /* Центрирование кнопки */
+    display: block; /* Делаем кнопку блочным элементом */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.search-btn:hover {
+    background-color: #3bc4c4; /* Темнее при наведении */
+}
+
+.travel-tips {
+    position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 50px;
+}
+
+.travel-tips h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Стили для контейнера с заголовком и стрелками */
+.tips-container {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+    gap: 10px; /* Расстояние между элементами */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для заголовка */
+.travel-tips h2 {
+    font-size: 24px;
+    color: #4ad5d5; /* Цвет текста */
+    margin: 0 150px; /* Отступы слева и справа */
+}
+
+/* Стили для стрелок */
+.arrows span {
+    font-size: 36px;
+    cursor: pointer;
+    color: #4ad5d5; /* Цвет стрелок */
+}
+
+.travel-tips p {
+    font-size: 16px;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Стили для menu-toggle */
+.menu-toggle {
+    display: none; /* Скрываем кнопку по умолчанию */
+    font-size: 24px;
+    cursor: pointer;
+    color: #4ad5d5;
+    margin-left: 200px;  
+}
+
+/* Медиа-запросы */
+@media (max-width: 1200px) {
+    /* Для больших планшетов и маленьких десктопов */
+    .search-form {
+        width: 50%;
+    }
+
+    .travel-tips {
+        width: 50%;
+    }
+
+    nav ul li {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Для планшетов */
+    header {
+        padding: 15px 30px; /* Уменьшаем отступы */
+    }
+
+    .search-form {
+        width: 60%;
+        padding: 30px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
+    }
+
+    .travel-tips {
+        width: 40%;
+    }
+
+    .travel-tips h1 {
+        font-size: 40px;
+    }
+
+    .travel-tips h2 {
+        font-size: 20px;
+        margin: 0 80px;
+    }
+
+    nav ul li {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Для мобильных устройств */
+    .menu-toggle {
+        display: block;
+    }
+
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .search-form {
+        width: 100%;
+        padding: 20px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 50%;
+    }
+
+    .travel-tips {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Для очень маленьких экранов */
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-form {
+        padding: 15px;
+        height: auto; /* Автоматическая высота на маленьких экранах */
+        min-height: 100vh; /* Минимальная высота равна высоте экрана */
+    }
+
+    .search-form label {
+        font-size: 14px;
+    }
+
+    .search-form input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .search-btn {
+        font-size: 10px;
+        padding: 6px 12px;
+        width: 60%;
+    }
+}

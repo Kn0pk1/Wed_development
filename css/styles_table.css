@@ -1,0 +1,183 @@
+/* styles.css */
+
+/* Глобальные переменные */
+:root {
+    --primary-color: #4ad5d5;
+    --text-color: #fff;
+    --bg-color: rgba(0, 0, 0, 0.8);
+    --font-family: Arial, sans-serif;
+}
+
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для body */
+body {
+    font-family: var(--font-family);
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .travel {
+    color: var(--primary-color);
+}
+
+.logo .logo-text {
+    color: var(--text-color);
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Подчеркивание для активной ссылки HOME */
+nav ul li a.active {
+    color: #4ad5d5; /* Цвет при активации */
+    text-decoration: underline; /* Подчеркивание */
+}
+
+nav ul li a:hover {
+    color: #4ad5d5; /* Цвет при наведении */
+}
+
+/* Общие стили */
+/* Стили для таблицы */
+/* Общие стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Фиксированная ширина столбцов */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+}
+
+/* Стили для строк */
+tr {
+    height: 60px; /* Одинаковая высота для всех строк */
+}
+
+/* Стили для ячеек */
+td, th {
+    border: 1px solid #4ad5d5; /* Границы ячеек */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle; /* Выравнивание текста по центру */
+    overflow: hidden; /* Обрезаем текст, если он не помещается */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    border-radius: 5px; /* Закругление углов ячеек */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Внутренняя тень */
+}
+
+/* Заголовки */
+th {
+    background-color: #4ad5d5; /* Цвет фона заголовков */
+    color: #fff; /* Цвет текста заголовков */
+    font-weight: bold;
+}
+
+/* Зебра-эффект */
+tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1); /* Светлый фон для нечётных строк */
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2); /* Более тёмный фон для чётных строк */
+}
+
+/* Анимация при наведении */
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Подсветка строки при наведении */
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    transform: scale(1.1); /* Увеличение ячейки при наведении */
+    transition: transform 0.3s ease;
+}
+
+/* Иконки */
+td i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
+    color: #4ad5d5; /* Цвет иконки */
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.rotate-message {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 9999;
+}
+
+/* Показываем надпись на маленьких экранах в портретной ориентации */
+@media (max-width: 768px) and (orientation: portrait) {
+    .rotate-message {
+        display: block; /* Показываем надпись */
+    }
+
+    body {
+        overflow: hidden; /* Блокируем прокрутку страницы */
+    }
+}
