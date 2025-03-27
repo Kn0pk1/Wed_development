@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="travel">TRAVEL</span><span class="logo-text">LOGO</span>
+        </div>
+        <div class="menu-toggle">MENU</div>
+        <nav>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="C:\Users\Ярослав\OneDrive\Рабочий стол\site/table.html">ABOUT</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero">
+        <div class="search-form">
+            <div class="button-group">
+                <button class="tab-btn active" data-tab="flights">FLIGHTS</button>
+                <button class="tab-btn" data-tab="hotels">HOTELS</button>
+                <button class="tab-btn" data-tab="rent-car">RENT CAR</button>
+            </div>
+            <form id="search-form">
+                <label for="from-city">From City</label>
+                <input type="text" id="from-city">
+
+                <label for="to-city">To City</label>
+                <input type="text" id="to-city">
+
+                <!-- Контейнер для параллельных полей -->
+                <div class="date-fields">
+                    <div>
+                        <label for="departure">Departure</label>
+                        <input type="text" id="departure">
+                    </div>
+                    <div>
+                        <label for="arrival">Arrival</label>
+                        <input type="text" id="arrival">
+                    </div>
+                </div>
+
+                <label for="passengers">Number of Passengers</label>
+                <input type="text" id="passengers">
+
+                <label for="budget">Budget</label>
+                <input type="text" id="budget">
+
+                <button type="submit" class="search-btn">SEARCH</button>
+            </form>
+        </div>
+
+        <div class="travel-tips">
+            <h1>IT'S TRAVEL TIME!</h1>
+            <div class="tips-container">
+                <div class="arrows"><span><</span></div>
+                <h2>10 TRAVEL TIPS</h2>
+                <div class="arrows"><span>></span></div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing<br> elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+        </div>
+    </section>
+</body>
+</html>
