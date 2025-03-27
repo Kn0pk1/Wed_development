@@ -1,4 +1,8 @@
 /* Базовые стили */
+* {
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,8 +11,8 @@ body {
 }
 
 h3 {
-    color: #666;
-    font-size: 0.75em;
+    color: #666; /* Серый цвет текста */
+    font-size: 0.75em; /* Размер шрифта */
 }
 
 /* Шапка */
@@ -20,19 +24,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
+    overflow: hidden; /* Предотвращает выход контента за пределы */
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    margin-left: -50px;
+    max-width: 1200px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 10px; /* Добавляем внутренние отступы */
 }
 
 .logo h1 {
@@ -45,7 +47,6 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
     gap: 20px;
 }
 
@@ -67,6 +68,7 @@ header {
     font-size: 1em;
     width: 250px;
     margin-right: 20px;
+    box-sizing: border-box; /* Учитываем padding и border */
 }
 
 .auth .login-button {
@@ -84,16 +86,50 @@ header {
     background-color: #e6b800;
 }
 
-/* Общие стили для всех контейнеров */
-.main-content {
-    padding-top: 80px;
-    margin: 10px;
-    width: 100%;
-    margin-left: 80px;
-    margin-right: auto;
+/* Основной контент */
+.main-container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренние отступы */
+    padding-top: 80px; /* Отступ сверху для фиксированной шапки */
 }
 
-.main-content section {
+.first-container
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между секциями */
+    margin-bottom: 20px; /* Отступ между контейнерами */
+    width: 100%; /* Все контейнеры занимают полную ширину */
+}
+
+.second-container
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между секциями */
+    margin-bottom: 20px; /* Отступ между контейнерами */
+    width: 72%; /* Все контейнеры занимают полную ширину */  
+}
+
+.third-container
+{
+    width: 72%; /* Полная ширина контейнера */
+    justify-content: space-between; /* Распределяем элементы */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.updates {
+    flex: 3; /* Больше места для актуальных обновлений */
+    margin-right: 10px; /* Добавляем отступ между блоками */
+}
+
+.popular {
+    flex: 1; /* Меньше места для популярного */
+}
+
+.second-container section {
+    flex: 1; /* Каждая секция занимает равное пространство */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -101,58 +137,13 @@ header {
     margin-bottom: 20px;
 }
 
-.main-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
 }
-
-.main-content th, .main-content td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.main-content .section-line {
-    border: 0;
-    height: 2px;
-    background-color: #000000;
-}
-
-/* Индивидуальные стили для first-container */
-.first-container {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 80px;
-    gap: 20px;
-}
-
-.first-container .updates {
-    flex: 3;
-    margin-right: 10px;
-}
-
-.first-container .popular {
-    flex: 1;
-}
-
-/* Индивидуальные стили для second-container */
-.second-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding-top: 20px;
-}
-
-.second-container section {
-    flex: 1;
-}
-
-/* Индивидуальные стили для third-container */
-.third-container {
-    padding-top: 20px;
-}
-
 
 ul {
     list-style-type: none;
@@ -178,12 +169,12 @@ th, td {
 .section-line {
     border: 0;
     height: 2px;
-    background-color: #000000;
+    background-color: #000000; /* Цвет линии */
 }
 
 /* Подвал */
 footer {
-    border-top: 3px solid #000000;
+    border-top: 3px solid #000000; /* Цвет и толщина линии */
     background-color: #e6e6e6;
     color: #fff;
     padding: 20px;
@@ -192,17 +183,17 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    max-width: auto;
-    margin: 0 auto;
+    justify-content: space-between; /* Равномерное распределение текста */
+    max-width: 1200px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем контейнер */
     padding: 20px;
-    width: auto;
+    width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
 }
 
 .footer-section {
-    flex: 1;
+    flex: 1; /* Каждая секция занимает равное пространство */
     margin: 0 15px;
-    text-align: left;
+    text-align: left; /* Выравнивание текста по левому краю */
 }
 
 .footer-section h3 {
@@ -214,7 +205,7 @@ footer {
     color: #000000;
     text-decoration: none;
     margin: 5px 0;
-    display: block;
+    display: block; /* Убедитесь, что текст занимает всю ширину */
 }
 
 .footer-section a:hover {
@@ -239,4 +230,126 @@ footer {
 .footer-section ul li a:hover {
     color: #000000;
     text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .main-container {
+        padding: 20px 10px; /* Уменьшаем отступы */
+    }
+
+    .first-container,
+    .second-container,
+    .third-container {
+        flex-direction: column; /* Переносим элементы в колонку */
+        width: 100%;
+        gap: 10px; /* Уменьшаем отступы */
+    }
+
+    .updates,
+    .popular {
+        flex: 1; /* Секции занимают всю ширину */
+    }
+
+    footer {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .footer-container {
+        flex-direction: row; /* Делаем футер горизонтальным */
+        justify-content: space-between; /* Равномерно распределяем секции */
+        gap: 10px; /* Добавляем небольшой отступ между секциями */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Переносим элементы в колонку */
+        align-items: flex-start; /* Выравниваем по левому краю */
+    }
+
+    .header-container {
+        flex-direction: column; /* Переносим элементы в колонку */
+        align-items: flex-start;
+        gap: 10px; /* Добавляем отступы между элементами */
+    }
+
+    .logo,
+    .menu,
+    .auth {
+        display: none; /* Скрываем лишние элементы */
+    }
+
+    .search-bar {
+        width: 100%; /* Поисковая строка занимает всю ширину */
+        order: 1; /* Переносим её в начало */
+    }
+
+    .search-bar input {
+        width: 100%; /* Поле ввода занимает всю ширину */
+        box-sizing: border-box; /* Учитываем padding и border */
+    }
+
+    .main-container {
+        padding: 20px 10px; /* Единые отступы для малых экранов */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Переносим элементы в колонку */
+        gap: 10px; /* Добавляем отступы между секциями */
+        padding: 10px; /* Единые отступы для малых экранов */
+    }
+
+    .footer-section:nth-child(3),
+    .footer-section:nth-child(4) {
+        display: none; /* Скрываем третью и четвертую секции */
+    }
+
+    .footer-section {
+        margin: 0; /* Убираем отступы */
+    }
+
+    .footer-section h3 {
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.8em; /* Уменьшаем размер шрифта */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 100%; /* Поисковая строка занимает всю ширину */
+        font-size: 0.9em; /* Уменьшаем размер шрифта */
+    }
+
+    .main-container {
+        padding: 20px 10px; /* Единые отступы для малых экранов */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Переносим элементы в колонку */
+        gap: 10px; /* Добавляем отступы между секциями */
+        padding: 10px; /* Единые отступы для малых экранов */
+    }
+
+    .footer-section:nth-child(3),
+    .footer-section:nth-child(4) {
+        display: none; /* Скрываем третью и четвертую секции */
+    }
+
+    .footer-section {
+        margin: 0; /* Убираем отступы */
+    }
+
+    .footer-section h3 {
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.8em; /* Уменьшаем размер шрифта */
+    }
 }
